@@ -1,0 +1,148 @@
+.aboutHead {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 30px;
+  color: white;
+  font-size: 1.2rem;
+  column-gap: 20px;
+}
+
+.aboutDesc {
+  grid-row: 1;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.aboutPhoto {
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  grid-row: 1;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.aboutSkills {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.skillsTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(20px, 10vw, 40px);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.skillSec {
+  padding: 25px;
+  width: 100%;
+  min-height: 600px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.skillType {
+  font-size: 1.25em;
+  padding: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.skillType.active {
+  background-color: var(--primary);
+  color: black;
+}
+
+.skillType:hover {
+  background-color: var(--primary);
+  color: black;
+}
+
+.skillHead {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  text-align: center;
+  column-gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.skillContent {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  animation: fadeup 0.5s forwards;
+  opacity: 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+.skill {
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.skill:hover {
+  background-color: var(--primary);
+}
+
+.skills li {
+  background-color: var(--lightBlack);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.inView {
+  animation: fadeup 1s ease forwards;
+}
+
+.inView .pageHeader {
+  animation: fadeup 1.2s ease forwards;
+}
+
+.inView .aboutHead {
+  animation: fadeup 1.4s ease forwards 0.3s;
+}
+
+.inView .aboutSkills {
+  animation: fadeup 1.6s ease forwards 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+  .skill {
+    padding: 5px 10px;
+  }
+  .skillSec {
+    padding: 0;
+  }
+  .aboutHead {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .aboutDesc {
+    grid-row: 2;
+    font-size: 15px;
+  }
+  .skillSec {
+    min-height: 300px;
+  }
+  .skillHead {
+    font-size: 13px;
+    gap: 0;
+  }
+}

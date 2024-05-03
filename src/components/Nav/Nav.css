@@ -1,0 +1,145 @@
+.navBar {
+  position: fixed;
+  bottom: 100;
+  padding: 25px 25px;
+  width: 100%;
+  animation: fadedown 1s forwards 0.1s;
+  transform: translate(0, -10%);
+  opacity: 0;
+  background-color: var(--background);
+  box-shadow: 4px 4px 8px var(--backgroundShadow);
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  top: 0;
+}
+
+.navBarInner {
+  justify-content: space-around;
+  width: 350px;
+}
+
+.navLogoLetter {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  z-index: 0;
+}
+
+.navLogoLetter,
+.navLogoBox {
+  font-size: 50px;
+}
+
+.navLogoBox,
+.navLogoLetter,
+.icon-letter,
+.icon-border {
+  color: var(--primary);
+}
+
+.navLogoBox {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  z-index: 10;
+  background-color: transparent;
+  transition: 1s;
+  transform: rotate(0deg);
+  animation: rotate 1s ease 0.75s;
+}
+
+.navLogoBox:hover {
+  transform: rotate(-180deg);
+}
+
+.navBarItem {
+  position: relative;
+}
+
+.navBarItem::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-radius: 2px;
+  height: 2px;
+  margin-top: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s;
+}
+
+.navBarItem:hover::after {
+  width: 100%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  left: 0%;
+  text-align: center;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 50px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+    -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-size: 60px;
+  color: white;
+  font-weight: normal;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.hambMenu {
+  color: white;
+  font-size: 40px;
+  display: none;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .navBarInner {
+    display: none;
+  }
+  .hambMenu {
+    display: flex;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

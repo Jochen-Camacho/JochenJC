@@ -1,0 +1,16 @@
+.footer {
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.checkIcon {
+  font-size: 30px;
+  margin-top: 10px;
+  color: var(--primary);
+}
+
+.inView .footer {
+  animation: fadeup 1.6s ease forwards 0.9s;
+}

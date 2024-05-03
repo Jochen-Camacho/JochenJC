@@ -1,0 +1,102 @@
+.heroCont {
+  padding-bottom: 40px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cubeCont {
+  grid-column: 10 / -1;
+  align-self: center;
+  justify-self: center;
+  grid-row: 1;
+  margin-top: 60px;
+}
+
+.heroInner {
+  transform: translateY(10%);
+  animation: fadeup 1s forwards 0.1s;
+  opacity: 0;
+  grid-column: 1 / 11;
+  grid-row: 1;
+  z-index: 10;
+}
+.heroDesc {
+  color: var(--grey);
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.heroIntro {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.heroIntro,
+.heroDesc {
+  font-size: clamp(10px, 4.5vw, 20px);
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.heroName,
+.heroMain {
+  line-height: 1.4;
+}
+
+.heroName {
+  font-size: clamp(30px, 7vw, 80px);
+}
+
+.heroMain {
+  font-size: clamp(20px, 5vw, 55px);
+}
+
+@media only screen and (max-width: 900px) {
+  .heroCont {
+    padding: 0 25px;
+  }
+}
+
+.typing-effect {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 0;
+  max-width: min-content;
+  color: var(--primary);
+  animation: typing 2.5s forwards 1.5s, blink 0.4s step-end infinite alternate,
+    typingBack 2.5s forwards 2.5s;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typingBack {
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .cubeCont {
+    display: none;
+  }
+}

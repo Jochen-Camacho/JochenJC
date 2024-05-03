@@ -1,0 +1,46 @@
+@keyframes drawBorder {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveToNav {
+  to {
+    opacity: 0;
+  }
+}
+
+.icon-border {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: drawBorder 2s forwards;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 80px;
+}
+
+.icon-letter {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  opacity: 1;
+  animation: fadeIn 1s forwards 0.5s;
+  position: absolute;
+  font-size: 80px;
+}
+
+.logo-main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo-cont {
+  opacity: 1;
+  animation: moveToNav 1s ease-in forwards 1.5s;
+}
