@@ -24,10 +24,10 @@ This is a portfolio website for myself to display my coding projects and abiliti
 
 ```bash
 # Clone the repository
-git clone https://github.com/Jochen-Camacho/JochenJC.git
+git clone https://github.com/Jochen-Camacho/jochenjc.git
 
 # Navigate to the project directory
-cd JochenJC
+cd jochenjc
 
 # Install dependencies
 npm install
