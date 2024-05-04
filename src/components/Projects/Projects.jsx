@@ -46,8 +46,8 @@ export const Projects = () => {
     , global state management and
     responsive layouts.`,
       screenshots: [scImgs.sc4, scImgs.sc5, scImgs.sc6, scImgs.sc7, scImgs.sc8],
-      websiteLink: "https://jochen-camacho.github.io/Beats/",
-      githubLink: "https://github.com/Jochen-Camacho/Beats",
+      websiteLink: "https://jochen-camacho.github.io/beats/",
+      githubLink: "https://github.com/Jochen-Camacho/beats",
     },
     {
       image: projectImgs.project2,
@@ -58,8 +58,8 @@ export const Projects = () => {
        unique components and
        responsive layouts.`,
       screenshots: [scImgs.sc1, scImgs.sc2, scImgs.sc3],
-      websiteLink: "https://jochen-camacho.github.io/Avgotdrip/",
-      githubLink: "https://github.com/Jochen-Camacho/Avgotdrip",
+      websiteLink: "https://jochen-camacho.github.io/avgotdrip/",
+      githubLink: "https://github.com/Jochen-Camacho/avgotdrip",
     },
   ];
 
