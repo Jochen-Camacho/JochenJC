@@ -40,10 +40,10 @@ export const Contact = () => {
         window.location.href = `mailto:${email}?subject=${encodeURIComponent(
           values.subject
         )}&body=${encodeURIComponent(values.msg)}`;
+      } catch (error) {
         alert(
           "If your email client did not open, please check your browser settings or email setup."
         );
-      } catch (error) {
         console.error("Failed to open email client:", error);
       }
     },
