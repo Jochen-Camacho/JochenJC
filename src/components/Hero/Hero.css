@@ -62,6 +62,9 @@
   .heroCont {
     padding: 0 25px;
   }
+  .heroInner {
+    padding: 0;
+  }
 }
 
 .typing-effect {
