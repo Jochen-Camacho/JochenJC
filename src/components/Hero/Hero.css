@@ -51,7 +51,7 @@
 }
 
 .heroName {
-  font-size: clamp(30px, 7vw, 80px);
+  font-size: clamp(20px, 7vw, 80px);
 }
 
 .heroMain {
