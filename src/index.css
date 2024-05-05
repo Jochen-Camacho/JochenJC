@@ -77,10 +77,6 @@ ol {
   color: white;
 }
 
-/* .highlight {
-  color: var(--secondary);
-} */
-
 .pageTitle {
   font-size: clamp(30px, 10vw, 65px);
   margin-left: -20px;

@@ -216,7 +216,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .project {
     padding: 7px;
   }
@@ -229,5 +229,8 @@
   }
   .screenShotsCont {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .scDisplayCont {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
