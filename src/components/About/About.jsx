@@ -113,16 +113,16 @@ export const About = () => {
         <div className="aboutHead  scrollPage">
           <img src={photo} className="aboutPhoto" />
           <p className="aboutDesc">
-            I Jochen Camacho, an aspireing software developer based in Ontario
-            Canada.
+            I, Jochen Camacho, am an aspiring software developer based in
+            Ontario, Canada.
             <br></br>
             <br></br>
-            My interest in how thing works lead me to learn coding skills to
-            further investigate the world of technology and subsqently challenge
-            the Computer Programming Program at Sheridan College Institute of
-            Technology and Advanced Learning.<br></br>
-            <br></br> I love learning new technology and implementing them to
-            quench my thirst of innovation.
+            My interest in how things work led me to learn coding skills to
+            further investigate the world of technology and subsequently
+            challenge the Computer Programming Program at Sheridan College
+            Institute of Technology and Advanced Learning.<br></br>
+            <br></br> I love learning new technology and implementing it to
+            quench my thirst for innovation.
           </p>
         </div>
         <div className="aboutSkills  scrollPage">

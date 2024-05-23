@@ -2,6 +2,7 @@ import React from "react";
 import "./Projects.css";
 import * as projectImgs from "../../assets/images/projectImgs";
 import * as scImgs from "../../assets/images/screenshots";
+import whatsAppDemo from "../../assets/videos/WhatsAppDemo.mp4";
 import {
   FaArrowCircleRight,
   FaArrowCircleLeft,
@@ -48,6 +49,7 @@ export const Projects = () => {
       screenshots: [scImgs.sc4, scImgs.sc5, scImgs.sc6, scImgs.sc7, scImgs.sc8],
       websiteLink: "https://jochen-camacho.github.io/beats/",
       githubLink: "https://github.com/Jochen-Camacho/beats",
+      hasVideo: false,
     },
     {
       image: projectImgs.project2,
@@ -60,6 +62,23 @@ export const Projects = () => {
       screenshots: [scImgs.sc1, scImgs.sc2, scImgs.sc3],
       websiteLink: "https://jochen-camacho.github.io/avgotdrip/",
       githubLink: "https://github.com/Jochen-Camacho/avgotdrip",
+      hasVideo: false,
+    },
+    {
+      image: projectImgs.project2,
+      title: "WhatsApp Clone",
+      desc: `An messaging application inspired by WhatsApp built both frontend using WPF and Backend using ASP.NET, with a MySQL Server.
+      Includes: Messaging capabilities, account creation and contact storing`,
+      screenshots: [
+        scImgs.sc9,
+        scImgs.sc10,
+        scImgs.sc11,
+        scImgs.sc12,
+        scImgs.sc13,
+        scImgs.sc14,
+      ],
+      githubLink: "https://github.com/Jochen-Camacho/WhataAppClone",
+      hasVideo: true,
     },
   ];
 
@@ -123,9 +142,11 @@ export const Projects = () => {
             <div className="project" key={currentIndex}>
               <h2 className="projectTitle">
                 {currentProject.title}{" "}
-                <Link to={currentProject.websiteLink} target="_blank">
-                  <RiShareBoxLine className="proIcon" />
-                </Link>
+                {currentProject.websiteLink != null && (
+                  <Link to={currentProject.websiteLink} target="_blank">
+                    <RiShareBoxLine className="proIcon" />
+                  </Link>
+                )}
                 <Link to={currentProject.githubLink} target="_blank">
                   <FaGithub className="proIcon" />
                 </Link>
@@ -146,13 +167,21 @@ export const Projects = () => {
                   </div>
                 </div>
               </div>
-              <Link to={currentProject.websiteLink} target="_blank">
-                <img
-                  className="projectImg"
-                  src={currentProject.image}
-                  alt={`Project #${currentIndex + 1}`}
-                />
-              </Link>
+
+              {currentProject.hasVideo ? (
+                <video width="100%" controls autoplay loop muted>
+                  <source src={whatsAppDemo} />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <Link to={currentProject.websiteLink} target="_blank">
+                  <img
+                    className="projectImg"
+                    src={currentProject.image}
+                    alt={`Project #${currentIndex + 1}`}
+                  />
+                </Link>
+              )}
             </div>
           </div>
           <span className="right-arrow" onClick={nextSlide}>
